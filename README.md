@@ -353,6 +353,46 @@ lsof                   # List all open files and the process using them
 lsof -itcp:4000        # Return the process listening on port 4000
 ```
 
+## Processes basic command
+```bash
+outline:
+- init
+- fork/exec
+- ps
+- kill
+- fg/bg/jobs
+
+start a process:
+[command]
+
+replace current process with another process:
+exec [command]
+
+see processes in your shell:
+ps f
+
+kill processes:
+kill -15 [pid]     <- sends sigterm
+kill     [pid]     <- also sends sigterm
+kill -2  [pid]     <- sends sigint
+kill -1  [pid]     <- sends sighup
+kill -9  [pid]     <- sends sigkill
+
+suspend process running in foreground:
+ctrl-z
+
+list jobs table:
+jobs
+
+send stopped process to background:
+bg
+bg [jobnum]
+
+bring process to foreground:
+fg
+fg [jobnum]
+```
+
 ## Process Priority
 
 Process priorities go from -20 (highest) to 19 (lowest).
